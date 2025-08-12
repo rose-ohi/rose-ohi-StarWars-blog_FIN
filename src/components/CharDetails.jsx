@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CharacterDetails = ({ character, onClose }) => {
+const CharDetails = ({ character, onClose }) => {
   // If no character is selected, don't render anything
   if (!character) return null;
 
@@ -19,12 +19,14 @@ const CharacterDetails = ({ character, onClose }) => {
           <div className="row">
             {/* Character image column */}
             <div className="col-md-4">
+              {/* NO imgs availiable */}
+              
               <img 
-                src={`https://via.placeholder.com/400x300?text=${character.name}`}
+                src={`https://static1.srcdn.com/wordpress/wp-content/uploads/2024/08/the-millennium-falcon-and-the-razor-crest-from-the-star-wars-franchise.jpg`}
                 alt={character.name}
                 className="img-fluid rounded"
-                style={{ width: "100%", height: "300px", objectFit: "cover" }}
-              />
+                style={{ width: "100%", height: "300px", objectFit: "cover" }}/>
+              
             </div>
             
             {/* Character details column */}
@@ -64,4 +66,4 @@ const CharacterDetails = ({ character, onClose }) => {
   );
 };
 
-export default CharacterDetails;
+export default CharDetails;

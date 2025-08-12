@@ -1,0 +1,18 @@
+
+body {
+   background-color: #1f0123; /* Optional: Sets a black background color for areas not covered by the image */
+   
+} 
+
+
+.card{
+
+  border: 3px solid green;
+  padding: 10px;
+}
+
+.h1{
+
+    color: rgb(1, 40, 1);
+     font-weight: 900;
+}

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CharacterCard = ({ character, onAddToFavorites, onViewDetails, isFavorite }) => {
+const CharCard = ({ character, onAddToFavorites, onViewDetails, isFavorite }) => {
   return (
-    <div className="card" style={{ width: "18rem", margin: "10px" }}>
-      {/* Card image - using a placeholder since SWAPI doesn't provide images */}
+    <div className="card container d-flex align-items-center" style={{ width: "18rem", margin: "10px" }}>
+      {/* Card image section - using a placeholder since SWAPI doesn't provide images */}
       <img 
-        src={`https://via.placeholder.com/300x200?text=${character.name}`} 
+        src={`https://static1.srcdn.com/wordpress/wp-content/uploads/2024/08/the-millennium-falcon-and-the-razor-crest-from-the-star-wars-franchise.jpg/${character.name}`} 
         className="card-img-top" 
         alt={character.name}
         style={{ height: "200px", objectFit: "cover" }}
@@ -15,7 +15,7 @@ const CharacterCard = ({ character, onAddToFavorites, onViewDetails, isFavorite 
         {/* Character name as card title */}
         <h5 className="card-title">{character.name}</h5>
         
-        {/* Basic character info */}
+        {/* Basic character info preview on card */}
         <p className="card-text">
           <small className="text-muted">
             Gender: {character.gender}<br/>
@@ -48,4 +48,4 @@ const CharacterCard = ({ character, onAddToFavorites, onViewDetails, isFavorite 
   );
 };
 
-export default CharacterCard;
+export default CharCard;

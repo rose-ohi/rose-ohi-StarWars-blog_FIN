@@ -1,13 +1,13 @@
 import React from 'react';
 
-const FavoritesDropdown = ({ favorites, onRemoveFromFavorites, onViewCharacter }) => {
+const Faves = ({ favorites, onRemoveFromFavorites, onViewCharacter }) => {
   return (
     <div className="dropdown">
-      {/* Dropdown toggle button showing favorites count */}
+      {/* Dropdown toggle button showing favorites + count */}
       <button 
         className="btn btn-primary dropdown-toggle" 
         type="button" 
-        id="favoritesDropdown" 
+        id="faves" 
         data-bs-toggle="dropdown" 
         aria-expanded="false"
       >
@@ -15,7 +15,7 @@ const FavoritesDropdown = ({ favorites, onRemoveFromFavorites, onViewCharacter }
       </button>
       
       {/* Dropdown menu containing favorite items */}
-      <ul className="dropdown-menu" aria-labelledby="favoritesDropdown">
+      <ul className="dropdown-menu" aria-labelledby="faves">
         {favorites.length === 0 ? (
           // Show message when no favorites exist
           <li><span className="dropdown-item text-muted">No favorites yet</span></li>
@@ -54,4 +54,4 @@ const FavoritesDropdown = ({ favorites, onRemoveFromFavorites, onViewCharacter }
   );
 };
 
-export default FavoritesDropdown;
+export default Faves;

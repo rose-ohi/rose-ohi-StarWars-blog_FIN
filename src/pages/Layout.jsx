@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 
 const App = () => {
-  // Global state for favorites - shared across all pages
+ 
   const [favorites, setFavorites] = useState([]);
 
   // Function to add or remove a character from favorites
@@ -34,8 +34,7 @@ const App = () => {
         onRemoveFromFavorites={handleRemoveFromFavorites}
       />
       
-      {/* Outlet renders the current page component based on the route */}
-      {/* This passes the favorites functions to child components */}
+  
       <Outlet context={{
         favorites,
         onToggleFavorite: handleToggleFavorite,

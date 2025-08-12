@@ -1,7 +1,7 @@
 import React from 'react';
-import CharacterCard from './CharacterCard';
+import CharCard from './CharCard';
 
-const CharacterList = ({ 
+const CharList = ({ 
   characters, 
   favorites, 
   onAddToFavorites, 
@@ -40,7 +40,7 @@ const CharacterList = ({
         {/* Map through characters and create a card for each one */}
         {characters.map((character, index) => (
           <div key={`${character.name}-${index}`} className="col-auto">
-            <CharacterCard
+            <CharCard
               character={character}
               onAddToFavorites={onAddToFavorites}
               onViewDetails={onViewDetails}
@@ -53,4 +53,4 @@ const CharacterList = ({
   );
 };
 
-export default CharacterList;
+export default CharList;

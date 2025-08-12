@@ -1,12 +1,8 @@
-
-// This is the entry point of your React application
-// It renders the main App component and attaches it to the HTML page
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-// Import Bootstrap CSS for styling (make sure this is installed)
+// Imports Bootstrap CSS (installed bootstrap in terminal)
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 

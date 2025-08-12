@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import FavoritesDropdown from './FavoritesDropdown';
+import Faves from './Faves';
 
 const Navbar = ({ favorites, onRemoveFromFavorites }) => {
   const navigate = useNavigate();
@@ -11,16 +11,16 @@ const Navbar = ({ favorites, onRemoveFromFavorites }) => {
   };
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-light bg-success">
       <div className="container-fluid">
-        {/* Brand/Home link using React Router Link */}
-        <Link to="/" className="navbar-brand mb-0 h1">
+        {/* Home link: using React Router Link */}
+        <Link to="/" className="navbar-brand mb-0 h1 ">
           Star Wars Blog
         </Link>
         
         {/* Right side of navbar - Favorites dropdown */}
         <div className="d-flex">
-          <FavoritesDropdown
+          <Faves
             favorites={favorites}
             onRemoveFromFavorites={onRemoveFromFavorites}
             onViewCharacter={handleViewCharacter}

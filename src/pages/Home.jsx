@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useOutletContext, useNavigate } from 'react-router-dom';
-import CharacterList from '../components/CharacterList';
+import CharList from '../components/CharList';
 
 export const Home = () => {
   // Get favorites functions from the parent App component via Outlet context
   const { favorites, onToggleFavorite } = useOutletContext();
   
-  // Hook for programmatic navigation (to go to single character page)
+
   const navigate = useNavigate();
 
   // Local state for this page
@@ -34,7 +34,7 @@ export const Home = () => {
       
       const data = await response.json();
       
-      // Add ID to each character for routing (extract from URL)
+      // Add ID to each character for routing (extracted from URL)
       const charactersWithIds = data.results.map((character, index) => ({
         ...character,
         id: index + 1 // Simple ID based on position
@@ -73,10 +73,10 @@ export const Home = () => {
   return (
     <div>
       <div className="container mt-4">
-        <h1 className="text-center mb-4">Star Wars Characters</h1>
+        <h1 className="text-center mb-4 text-light">Star Wars Characters</h1>
       </div>
       
-      <CharacterList
+      <CharList
         characters={characters}
         favorites={favorites}
         onAddToFavorites={onToggleFavorite}
